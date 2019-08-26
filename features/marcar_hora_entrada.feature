@@ -25,3 +25,10 @@ Característica: Registrar hora de entrada
       Entonces se buscara mi nombre
       Y aparecera el mensaje: Inicio de Jornada atrasada por 0:14:59.
 
+  @jornadasDeIngreso
+  Escenario: 
+      Dado que mi horario es Diurno B
+      Cuando ingrese mi entrada antes de lo esperado (20 min) a mi hora de marcado 13:00 el dia martes
+      Y ingrese mi codigo de trabajador: 20153
+      Entonces se buscara mi nombre
+      Y aparecera el mensaje: Aún no empieza su turno de trabajo.

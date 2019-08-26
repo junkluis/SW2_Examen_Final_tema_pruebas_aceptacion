@@ -27,6 +27,18 @@ def step_impl(context, tiempo, hora, dia):
     context.minuto = int(hora[1])
     context.dia = dia
     
+@when("ingrese mi entrada antes de los esperado ({tiempo} min) a mi hora de marcado {hora} el dia {dia}")
+def step_impl(context, tiempo, hora, dia):
+    tiempo = tiempo.split(":")
+    context.horas = int(tiempo[0])
+    context.minutos = int(tiempo[1])
+    context.segundos = int(tiempo[2])
+
+    hora = hora.split(":")
+    context.hora = int(hora[0]) - 1
+    context.minuto = int(hora[1])
+    context.dia = dia
+    
 
 @when("ingrese mi codigo de trabajador: {codigo}")
 def step_impl(context, codigo):
