@@ -15,7 +15,7 @@ def step_impl(context):
 def step_impl(context):
 	pass
 
-@then("genera el siguiete resultado '{variable}'")
+@then("genera el siguiente resultado '{variable}'")
 def step_impl(context, variable):
 	print(variable)
 	pass
