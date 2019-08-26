@@ -11,7 +11,23 @@ def before_scenario(context, scenario):
 def step_impl(context):
 	pass
 
+@given("que mi horario de trabajo puede ser diurno o nocturno")
+def step_impl(context):
+	pass
+
 @when("se ejecute una accion")
+def step_impl(context):
+	pass
+
+@when("ingrese mi hora de entrada hasta con un retraso de {minutos} minutos con {segundos} segundos a mi hora de marcado")
+def step_impl(context):
+	pass
+
+@then("se buscara mi nombre en la lista de trabajadores y aparecera el mensaje: '{mensaje}'")
+def step_impl(context):
+	pass
+
+@then("")
 def step_impl(context):
 	pass
 
