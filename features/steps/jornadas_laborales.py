@@ -45,6 +45,7 @@ def step_impl(context, mensaje):
     msj, empleado = marcar_hora_entrada(context.codigo, context.dia,
                                     context.hora, context.minutos,
                                     context.segundos)
+    print(msj)
     assert msj == mensaje
 
 
