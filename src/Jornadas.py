@@ -18,6 +18,7 @@ horarios = { "Diurno A": [("lunes", time(7,0,0)), ("viernes", time(7,0,0))],
 
 def marcar_hora_entrada(cod_trabajador, dia, hora, minutos, segundos):
 	mensaje = ""
+	
 
 	hora_marcada = datetime.now()
 	hora_marcada = hora_marcada.replace(hour=hora, minute=minutos, second=segundos)
