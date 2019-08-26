@@ -29,7 +29,7 @@ Característica: Registrar hora de entrada
   Escenario: llega atrasado
       Dado que mi horario de trabajo es 'Nocturno A' y es 'miercoles'
       Cuando ingrese mi hora de entrada como '17:15:00'
-      Y ingrese mi codigo de trabajador '20111'
+      Y ingrese mi codigo de trabajador '20150'
       Entonces aparecerá el siguiente mensaje 'Inicio de Jornada atrasada por 0:00:00.'
       Y cuya jornada laboral es 'Nocturno A'
 
@@ -37,6 +37,6 @@ Característica: Registrar hora de entrada
   Escenario: llega muy temprano
       Dado que mi horario de trabajo es 'Nocturno B' y es 'jueves'
       Cuando ingrese mi hora de entrada como '16:40:00'
-      Y ingrese mi codigo de trabajador '20153'
+      Y ingrese mi codigo de trabajador '20191'
       Entonces aparecerá el mensaje 'Aún no empieza su turno de trabajo.'
       Y cuya jornada laboral es 'Nocturno B'
