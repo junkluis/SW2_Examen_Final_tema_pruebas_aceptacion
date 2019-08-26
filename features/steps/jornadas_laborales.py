@@ -6,20 +6,43 @@ from src.Jornadas import *
 def before_scenario(context, scenario):
 	context = {}
 
+# @given("que se cumplen los requisitos")
+# def step_impl(context):
+# 	pass
 
-@given("que se cumplen los requisitos")
+# @when("se ejecute una accion")
+# def step_impl(context):
+# 	pass
+
+# @then("genera el siguiete resultado '{variable}'")
+# def step_impl(context, variable):
+# 	print(variable)
+# 	pass
+
+
+
+@given("que mi horario de trabajo puede ser diurno o nocturno")
 def step_impl(context):
 	pass
 
-@when("se ejecute una accion")
-def step_impl(context):
-	pass
+@when("ingrese mi hora de entrada: {dia} {hora}:{minuto}:{segundo}")
+def step_impl(context, dia, hora, minuto, segundo):
+	context.dia = dia
+	context.hora = int(hora)
+	context.minuto = int(minuto)
+	context.segundo = int(segundo)
 
-@then("genera el siguiete resultado '{variable}'")
-def step_impl(context, variable):
-	print(variable)
-	pass
+@when("ingrese mi codigo de trabajador {codigo}")
+def step_impl(context, codigo):
+	context.codigo = codigo
 
-@then("tambien ocurre lo siguiente (si es necesario)")
+@then("se buscará mi nombre en la lista de trabajadores")
 def step_impl(context):
-	pass
+	mensaje, empleado1 = marcar_hora_entrada(context.codigo, context.dia, context.hora, context.minuto, context.segundo)
+	context.mensaje = mensaje
+
+@then("aparecerá el mensaje '{mensaje}'")
+def step_impl(context, mensaje):
+	print(context.mensaje)
+	print(mensaje)
+	assert context.mensaje == mensaje

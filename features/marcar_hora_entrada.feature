@@ -2,9 +2,34 @@
 
 Característica: Registrar hora de entrada
 
- @jornadasDeIngreso
-  Escenario: 
-      Dado que se cumplen los requisitos
-      Cuando se ejecute una accion
-      Entonces genera el siguiete resultado 'resultado_variable'
-      Y tambien ocurre lo siguiente (si es necesario)
+    @jornadaDeIngreso1
+    Escenario: Hora de ingreso normal
+        Dado que mi horario de trabajo puede ser diurno o nocturno
+        Cuando ingrese mi hora de entrada: lunes 7:14:59 
+        Y ingrese mi codigo de trabajador 20131
+        Entonces se buscará mi nombre en la lista de trabajadores
+        Y aparecerá el mensaje 'Inicio de Jornada a tiempo, Bienvenido Luis Zuniga.'
+
+    @jornadaDeIngreso2
+    Escenario: Hora de ingreso en día no permitido por jornada
+        Dado que mi horario de trabajo puede ser diurno o nocturno
+        Cuando ingrese mi hora de entrada: martes 7:14:59 
+        Y ingrese mi codigo de trabajador 20131
+        Entonces se buscará mi nombre en la lista de trabajadores
+        Y aparecerá el mensaje 'EL día martes no tiene jornada laboral programada.'
+
+    @jornadaDeIngreso3
+    Escenario: Hora de ingreso con atraso
+        Dado que mi horario de trabajo puede ser diurno o nocturno
+        Cuando ingrese mi hora de entrada: lunes 7:16:00
+        Y ingrese mi codigo de trabajador 20131
+        Entonces se buscará mi nombre en la lista de trabajadores
+        Y aparecerá el mensaje 'Inicio de Jornada atrasada por 0:01:01.'
+
+    @jornadaDeIngreso4
+    Escenario: Hora de ingreso temprano
+        Dado que mi horario de trabajo puede ser diurno o nocturno
+        Cuando ingrese mi hora de entrada: lunes 6:40:00
+        Y ingrese mi codigo de trabajador 20131
+        Entonces se buscará mi nombre en la lista de trabajadores
+        Y aparecerá el mensaje 'Su turno empieza en 0:00:01.'
