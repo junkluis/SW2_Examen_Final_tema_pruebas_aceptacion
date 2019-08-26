@@ -1,21 +1,14 @@
-﻿# Taller de cucumbers con Python
+# SW2 Examen Final Tema: Pruebas de aceptación con cucumber
 
 ## Instrucciones:
 
-1. Aceptar la invitación como colaborador al repositorio
-2. Crear una rama con su nombre completo ejemplo:
+1. Crear una rama con su nombre completo ejemplo:
 
 		git checkout -b [nombre_apellido1_apellido2]
 
-2. Cree los archivos de prueba en la carpeta 'features', junto al código de prueba en la carpeta 'features/steps'.
+2. Buscar y modificar la tarea en Jenkins con su nombre y apellido en la pestaña **Examen tema 2**, y configure su rama para el análisis. 
+3. Realizar las pruebas de aceptación para cubrir los 4 criterios de aceptacion (Recuerde usar datos reales). 
+4. Modificar los archivos **features/marcar_hora_entrada.feature y features/steps/jornadas_laborales.py**
+5. Una vez agregada las pruebas exitosamente, suba los cambios en su rama y ejecute la tarea en Jenkins para visualizar su avance.
 
-3. Asegúrese que se ejecuten las pruebas correctamente. 
-   Para ejecutar las pruebas localmente utilice el siguiente comando en el cmd:
-
-		pip install behave
-		behave
-   
-4. Una vez que corra las pruebas exitosamente, suba los cambios en su rama.
 		git push origin [nombre_apellido1_apellido2]
-
-5. Cree una nueva tarea en Jenkins y genere un reporte de pruebas cucumber.
