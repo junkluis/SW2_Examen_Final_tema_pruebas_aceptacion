@@ -1,0 +1,5 @@
+@jornadasDeIngreso3
+  Escenario:
+        Dado que mi horario puede ser 'diurno'
+              Cuando ingrese mi hora de entrada: '13:50:00' el dia: 'martes' y código: '20193'
+                    Entonces aparecerá el mensaje: 'Inicio de Jornada atrasada por 0:05:00.999978' y mi jornada laboral 'Diurno B'
