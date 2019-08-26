@@ -17,8 +17,8 @@ Característica: Registrar hora de entrada
 
 	Escenario:
 		Dado mi codigo 20131
-		Cuando ingreso el dia lunes con la hora 07, minutos 16 y segundos 59
-		Entonces genera el siguiete resultado 'Inicio de Jornada atrasada por 0:02:00.'
+		Cuando ingreso el dia lunes con la hora 07, minutos 16 y segundos 00
+		Entonces genera el siguiete resultado 'Inicio de Jornada atrasada por 0:01:01.'
 
 	Escenario:
 		Dado mi codigo 20131
