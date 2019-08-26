@@ -16,10 +16,8 @@ horarios = { "Diurno A": [("lunes", time(7,0,0)), ("viernes", time(7,0,0))],
 			}
 
 
-
 def marcar_hora_entrada(cod_trabajador, dia, hora, minutos, segundos):
 	mensaje = ""
-	
 
 	hora_marcada = datetime.now()
 	hora_marcada = hora_marcada.replace(hour=hora, minute=minutos, second=segundos)
@@ -39,7 +37,7 @@ def marcar_hora_entrada(cod_trabajador, dia, hora, minutos, segundos):
 			else:
 				if(hora_marcada > hora_max_marcado_tarde):
 					diferencia = hora_marcada - hora_max_marcado_tarde
-					mensaje = "Inicio de Jornada atrasada por"+str(diferencia)+"."
+					mensaje = "Inicio de Jornada atrasada por "+str(diferencia)+"."
 				elif( hora_marcada < hora_max_marcado_temprano):
 					diferencia = hora_max_marcado_temprano - hora_marcada
 					mensaje = "Su turno empieza en "+str(diferencia)+"."
