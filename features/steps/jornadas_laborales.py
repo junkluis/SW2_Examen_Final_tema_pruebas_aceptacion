@@ -9,7 +9,9 @@ def before_scenario(context, scenario):
 
 @given("que mi horario de trabajo puede ser '{horario}'")
 def step_impl(context, horario):
-	assert horario in ['diurno','nocturno']
+	horarario.joranda horario
+	#assert horario in ['diurno','nocturno']
+	
 
 @when("ingrese mi horario de entrada: '{entrada}' el dia: '{dia}' , código: '{codigo}'")
 def step_impl(context, entrada, dia, codigo):
