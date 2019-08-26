@@ -33,14 +33,14 @@ def marcar_hora_entrada(cod_trabajador, dia, hora, minutos, segundos):
 			hora_max_marcado_temprano = hora_max_marcado - timedelta(minutes=19, seconds=59)
 
 			if(hora_max_marcado_temprano <= hora_marcada <= hora_max_marcado_tarde):
-				mensaje = "Inicio de Jornada a tiempo, Bienvenido "+empleado[0]+"."
+				mensaje = "Inicio de Jornada a tiempo, Bienvenido "+empleado[0]
 			else:
 				if(hora_marcada > hora_max_marcado_tarde):
 					diferencia = hora_marcada - hora_max_marcado_tarde
-					mensaje = "Inicio de Jornada atrasada por "+str(diferencia)+"."
+					mensaje = "Inicio de Jornada atrasada por "+str(diferencia)
 				elif( hora_marcada < hora_max_marcado_temprano):
 					diferencia = hora_max_marcado_temprano - hora_marcada
-					mensaje = "Su turno empieza en "+str(diferencia)+"."
+					mensaje = "Aun no empieza su turno de trabajo"
 
 		if(mensaje == ""):
 			mensaje = "EL día "+dia+" no tiene jornada laboral programada."

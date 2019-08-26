@@ -4,36 +4,25 @@ from src.Jornadas import *
 
 #Condiciones antes de empezar cualquier STEP
 def before_scenario(context, scenario):
-	context = {}
+    context = {}
+#Revisar que exista el tipo de jornada
 
-@given("que mi horario sea: '{jornada}'")
+@given("que mi horario puede ser '{jornada}'")
 def step_impl(context, jornada):
-    context.dia = jornada
-
-@when("ingrese mi hora de entrada en hora: '{hora}', minutos: '{minutos}', segundos: '{segundos}' y mi codigo: '{codigo}'")
-def step_impl(context, hora, minutos, segundos, codigo):
-    context.hora = int(hora)
-    context.minutos = int(minutos)
-    context.segundos = int(segundos)
-    context.codigo = codigo
-
-    mensaje, jornada = marcar_hora_entrada(context.codigo,context.dia,context.hora,context.minutos, context.segundos)
-    print(resultado)
+    jornadas = ['nocturno', 'diurno']
+    assert jornada in jornadas
+#Formato hh:mm:ss, Error de UTF8 sin tildes
+@when("ingrese mi hora de entrada: '{entrada}' el dia: '{dia}' y código: '{codigo}'")
+def step_impl(context, entrada, dia, codigo):
+    hora, minutos, segundos = entrada.split(':')
+    mensaje, jornada = marcar_hora_entrada(codigo, dia, int(hora), int(minutos), int(segundos))
     context.mensaje = mensaje
     context.jornada = jornada
 
-@then("se buscara mi nombre en la lista de empleados")
-def step_impl(context):
-    pass
-@then("aparecera el mensaje: '{mensaje}'")
-def step_impl(context, mensaje):
-    print(mensaje)
+@then("aparecerá el mensaje: '{mensaje}' y mi jornada laboral '{jornada}'")
+def step_impl(context, mensaje, jornada):
     print(context.mensaje)
     assert context.mensaje == mensaje
-@then("devolvera mi jornada laboral: '{jornada}'")
-def step_impl(context, jornada):
-    print(jornada)
-    print(context.jornada)
     assert context.jornada == jornada
 
 @given("que se cumplen los requisitos")
