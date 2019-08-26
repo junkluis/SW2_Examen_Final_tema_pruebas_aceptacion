@@ -1,25 +1,29 @@
 from behave import *
-from src.Jornadas import *
+from src.Jornadas import * as jornadas
 
 
-#Condiciones antes de empezar cualquier STEP
+# Condiciones antes de empezar cualquier STEP
 def before_scenario(context, scenario):
-	context = {}
+    context = {}
 
 
-@given("que se cumplen los requisitos")
+@given("Dado que mi horario puede ser diurno o nocturno")
 def step_impl(context):
-	pass
+    pass
 
-@when("se ejecute una accion")
-def step_impl(context):
-	pass
 
-@then("genera el siguiete resultado '{variable}'")
+@when("ingrese mi hora de entrada '{dia}', '{hora}', '{minutos}', '{segundos}' y mi codigo de trabajador '{cod}'")
+def step_impl(context, dia, hora, minutos, segundos, cod):
+    resultado = marcar_hora_entrada(cod, dia, hora, minutos, segundos)
+    context.mensaje = resultado[0]
+    context.jornada = resultado[1]
+
+
+@then("genera el siguiete mensaje '{variable}'")
 def step_impl(context, variable):
-	print(variable)
-	pass
+    assert context.mensaje == variable
 
-@then("tambien ocurre lo siguiente (si es necesario)")
-def step_impl(context):
-	pass
+
+@then("y devolvera el tipo de jornada laboral '{jornada}'")
+def step_impl(context, jornada):
+    assert context.jornada == jornada
