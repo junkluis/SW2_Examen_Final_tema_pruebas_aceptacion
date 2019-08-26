@@ -6,20 +6,27 @@ from src.Jornadas import *
 def before_scenario(context, scenario):
 	context = {}
 
+@given("que mi horario es '{horario}'")
+def step_impl(context, horario):
+	assert horario in ['diurno','nocturno']
 
-@given("que se cumplen los requisitos")
-def step_impl(context):
-	pass
+@when("ingreso mi hora de entrada: '{entrada}' el dia: '{dia}' y código: '{codigo}'")
+def step_impl(context, entrada, dia, codigo):
+	hora, minutos, segundos = entrada.split(':')
+	mensaje, jornada = marcar_hora_entrada(codigo, dia, int(hora), int(minutos), int(segundos))
+	context.mensaje = mensaje
+	context.jornada = jornada
 
-@when("se ejecute una accion")
-def step_impl(context):
-	pass
+@then("se buscarán mis datos y aparecerá el siguiente mensaje '{mensaje}'")
+def step_impl(context, mensaje):
+	result = marcar_hora_entrada(context.codigo, context.dia, int(context.horas), int(context.minutos), int(context.segundos))[0] == mensaje
+	assert result
 
-@then("genera el siguiete resultado '{variable}'")
-def step_impl(context, variable):
-	print(variable)
-	pass
+@then("aparecerá el mensaje: '{mensaje}'")
+def step_impl(context, mensaje):
+	context.mensaje = context.mensaje[:len(mensaje)]
+	assert context.mensaje == mensaje
 
-@then("tambien ocurre lo siguiente (si es necesario)")
-def step_impl(context):
-	pass
+@then("la jornada laboral es '{horario}'")
+def step_impl(context, horario):
+	assert horario == marcar_hora_entrada(context.codigo, context.dia, int(context.horas), int(context.minutos), int(context.segundos))[1]
