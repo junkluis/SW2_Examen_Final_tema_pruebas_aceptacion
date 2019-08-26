@@ -26,7 +26,7 @@ Característica: Registrar hora de entrada
         Cuando ingrese mi hora de entrada: lunes 7:16:00
         Y ingrese mi codigo de trabajador 20131
         Entonces se buscará mi nombre en la lista de trabajadores
-        Y aparecerá el mensaje 'Inicio de Jornada atrasada por 0:01:01.'
+        Y aparecerá el mensaje 'Inicio de Jornada atrasada por 0:01:00.999990.'
         Y devolverá el tipo de jornada 'Diurno A'
 
     @jornadaDeIngreso4
