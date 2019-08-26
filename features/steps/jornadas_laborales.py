@@ -60,8 +60,8 @@ def step_impl(context, variable):
 
 @then("aparecera el siguiente mensaje '{msg}'")
 def step_impl(context, msg):
-	assert(context['mensaje'], msg)
+	assert context['mensaje'] == msg
 
 @then("devolvera el tipo de jornada '{jornada}'")
 def step_impl(context, jornada):
-	assert(context['empleado'](1), jornada)
+	assert context['empleado'](1) == jornada
