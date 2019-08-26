@@ -9,6 +9,7 @@ Característica: Registrar hora de entrada
         Y ingrese mi codigo de trabajador 20131
         Entonces se buscará mi nombre en la lista de trabajadores
         Y aparecerá el mensaje 'Inicio de Jornada a tiempo, Bienvenido Luis Zuniga.'
+        Y devolverá el tipo de jornada 'Diurno A'
 
     @jornadaDeIngreso2
     Escenario: Hora de ingreso en día no permitido por jornada
@@ -17,6 +18,7 @@ Característica: Registrar hora de entrada
         Y ingrese mi codigo de trabajador 20131
         Entonces se buscará mi nombre en la lista de trabajadores
         Y aparecerá el mensaje 'EL día martes no tiene jornada laboral programada.'
+        Y devolverá el tipo de jornada 'Diurno A'
 
     @jornadaDeIngreso3
     Escenario: Hora de ingreso con atraso
@@ -25,6 +27,7 @@ Característica: Registrar hora de entrada
         Y ingrese mi codigo de trabajador 20131
         Entonces se buscará mi nombre en la lista de trabajadores
         Y aparecerá el mensaje 'Inicio de Jornada atrasada por 0:01:01.'
+        Y devolverá el tipo de jornada 'Diurno A'
 
     @jornadaDeIngreso4
     Escenario: Hora de ingreso temprano
@@ -33,3 +36,4 @@ Característica: Registrar hora de entrada
         Y ingrese mi codigo de trabajador 20131
         Entonces se buscará mi nombre en la lista de trabajadores
         Y aparecerá el mensaje 'Su turno empieza en 0:00:01.'
+        Y devolverá el tipo de jornada 'Diurno A'

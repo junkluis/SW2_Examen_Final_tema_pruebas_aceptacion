@@ -38,11 +38,14 @@ def step_impl(context, codigo):
 
 @then("se buscará mi nombre en la lista de trabajadores")
 def step_impl(context):
-	mensaje, empleado1 = marcar_hora_entrada(context.codigo, context.dia, context.hora, context.minuto, context.segundo)
+	mensaje, jornada = marcar_hora_entrada(context.codigo, context.dia, context.hora, context.minuto, context.segundo)
 	context.mensaje = mensaje
+	context.jornada = jornada
 
 @then("aparecerá el mensaje '{mensaje}'")
 def step_impl(context, mensaje):
-	print(context.mensaje)
-	print(mensaje)
 	assert context.mensaje == mensaje
+
+@then("devolverá el tipo de jornada '{jornada}'")
+def step_impl(context, jornada):
+	assert context.jornada == jornada
