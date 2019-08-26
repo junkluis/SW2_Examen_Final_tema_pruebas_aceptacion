@@ -41,6 +41,12 @@ def step_impl(context):
 	mensaje, jornada = marcar_hora_entrada(context.codigo, context.dia, context.hora, context.minuto, context.segundo)
 	if (mensaje.startswith("Su turno empieza")):
 		mensaje = 'Aún no empieza su turno de trabajo.'
+	elif (mensaje.startswith("Inicio de Jornada atrasada por")):
+		partes = mensaje.split(":")
+		segundos = partes[-1]
+		segundos = segundos.split(".")[0]
+		partes[-1] = segundos
+		mensaje = ":".join(partes) + "."
 	context.mensaje = mensaje
 	context.jornada = jornada
 
