@@ -20,13 +20,6 @@ def step_impl(context, entrada, dia, codigo):
 
 @then("aparecerá el mensaje: '{mensaje}' y mi jornada laboral '{jornada}'")
 def step_impl(context, mensaje, jornada):
-	if len(context.mensaje) != len(mensaje):
-		context.mensaje = context.mensaje[:28]
-	if len(context.mensaje) != len(mensaje):
-		context.mensaje = context.mensaje[:10]
-	print(context.jornada)
-	print(jornada)
-	print(context.mensaje)
-	print(mensaje)
+	context.mensaje = context.mensaje[:len(mensaje)]
 	assert context.mensaje == mensaje
 	assert context.jornada == jornada
