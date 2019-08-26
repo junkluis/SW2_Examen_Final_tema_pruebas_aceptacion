@@ -21,6 +21,15 @@ Característica: Registrar hora de entrada
 
 
     @jornadasDeIngreso
+    Escenario: El trabajador intenta iniciar su jornada un dia que no tiene jornada
+        Dado que mi horario de trabajo puede ser diurno o nocturno
+        Cuando ingrese mi hora de entrada 'martes 7:00:00'
+        Y ingrese mi codigo de trabajador '20131'
+        Entonces aparecera el siguiente mensaje 'EL día martes no tiene jornada laboral programada.'
+        Y devolvera el tipo de jornada 'Diurno A'
+
+
+    @jornadasDeIngreso
     Escenario: El trabajador incia su jornada tarde
         Dado que mi horario de trabajo puede ser diurno o nocturno
         Cuando ingrese mi hora de entrada 'lunes 7:20:00'

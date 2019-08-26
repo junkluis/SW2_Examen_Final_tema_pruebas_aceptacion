@@ -38,8 +38,6 @@ def step_impl(context, hora_entrada):
     hora_entrada = hora_entrada.split(" ")
     dia = hora_entrada[0]
     tiempo = hora_entrada[1].split(":")
-    print(context)
-    print(type(context))
     context["dia"] = dia
     context["hora"] = int(tiempo[0])
     context["minutos"] = int(tiempo[1])
