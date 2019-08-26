@@ -2,6 +2,13 @@
 
 Característica: Registrar hora de entrada
 
+ @jornadasDeIngreso
+  Escenario:
+      Dado que se cumplen los requisitos
+      Cuando se ejecute una accion
+      Entonces genera el siguiete resultado 'resultado_variable'
+      Y tambien ocurre lo siguiente (si es necesario)
+
   @jornadasDeIngresoC1
   Escenario: llega a tiempo
       Dado que mi horario de trabajo es 'Diurno A' y es 'lunes'
@@ -13,7 +20,7 @@ Característica: Registrar hora de entrada
    @jornadasDeIngresoC2
   Escenario: no tiene jornada laboral ese dia
       Dado que mi horario de trabajo es 'Diurno A' y es 'martes'
-      Cuando ingrese mi hora como '7:14:59'
+      Cuando ingrese mi hora de entrada como '7:14:59'
       Y ingrese mi codigo de trabajador '20131'
       Entonces se buscara mi nombre en la lista de trabajadores y aparecerá el siguiente mensaje 'EL día martes no tiene jornada laboral programada.'
       Y cuya jornada laboral es 'Diurno A'
