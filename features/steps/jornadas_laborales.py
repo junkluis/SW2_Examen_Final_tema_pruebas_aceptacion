@@ -41,10 +41,10 @@ def step_impl(context, hora_entrada):
     print(hora_entrada)
     print(dia)
     print(tiempo)
-    context['dia'] = dia
-    context['hora'] = int(tiempo[0])
-    context['minutos'] = int(tiempo[1])
-    context['segundos'] = int(tiempo[0])
+    context["dia"] = 0
+    context["hora"] = int(tiempo[0])
+    context["minutos"] = int(tiempo[1])
+    context["segundos"] = int(tiempo[0])
 
 
 @when("ingrese mi codigo de trabajador '{cod_trabajador}'")
