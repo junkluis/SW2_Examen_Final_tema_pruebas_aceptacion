@@ -26,7 +26,7 @@ def step_impl(context, dia, hora, minutos, segundos):
 def step_impl(context, mensaje):
 	print(mensaje)
 	print(context.mensaje)
-	assert context.mensaje == mensaje.split(".")[0] + "."
+	assert context.mensaje.split(".")[0] + "." == mensaje
 
 @then("mi tipo de jornada laboral es '{jornada}'")
 def step_impl(context, jornada):
