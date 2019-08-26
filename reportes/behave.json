@@ -51,7 +51,7 @@
           },
           "name": "llegue el dia 'lunes' e ingrese mi hora de entrada '7':'14':'59' e ingrese mi codigo de trabajador '20131'",
           "result": {
-            "duration": 0.009999275207519531,
+            "duration": 0.010000467300415039,
             "status": "passed"
           },
           "step_type": "when"
@@ -99,7 +99,7 @@
                 "value": "Diurno A"
               }
             ],
-            "location": "features/steps/jornadas_laborales.py:33"
+            "location": "features/steps/jornadas_laborales.py:35"
           },
           "name": "devolvera el tipo de jornada laboral: 'Diurno A'",
           "result": {
@@ -212,7 +212,7 @@
                 "value": "Diurno A"
               }
             ],
-            "location": "features/steps/jornadas_laborales.py:33"
+            "location": "features/steps/jornadas_laborales.py:35"
           },
           "name": "devolvera el tipo de jornada laboral: 'Diurno A'",
           "result": {
@@ -325,7 +325,7 @@
                 "value": "Diurno A"
               }
             ],
-            "location": "features/steps/jornadas_laborales.py:33"
+            "location": "features/steps/jornadas_laborales.py:35"
           },
           "name": "devolvera el tipo de jornada laboral: 'Diurno A'",
           "result": {
@@ -355,7 +355,7 @@
           },
           "name": "que mi horario de trabajo puede ser diurno o nocturno",
           "result": {
-            "duration": 0.0,
+            "duration": 0.009999513626098633,
             "status": "passed"
           },
           "step_type": "given"
@@ -390,7 +390,7 @@
           },
           "name": "llegue el dia 'lunes' e ingrese mi hora de entrada '6':'40':'00' e ingrese mi codigo de trabajador '20131'",
           "result": {
-            "duration": 0.00999903678894043,
+            "duration": 0.0,
             "status": "passed"
           },
           "step_type": "when"
@@ -438,7 +438,7 @@
                 "value": "Diurno A"
               }
             ],
-            "location": "features/steps/jornadas_laborales.py:33"
+            "location": "features/steps/jornadas_laborales.py:35"
           },
           "name": "devolvera el tipo de jornada laboral: 'Diurno A'",
           "result": {
