@@ -1,0 +1,465 @@
+[
+{
+  "elements": [
+    {
+      "keyword": "Escenario",
+      "location": "features/marcar_hora_entrada.feature:6",
+      "name": "",
+      "status": "passed",
+      "steps": [
+        {
+          "keyword": "Dado",
+          "location": "features/marcar_hora_entrada.feature:7",
+          "match": {
+            "arguments": [],
+            "location": "features/steps/jornadas_laborales.py:10"
+          },
+          "name": "que mi horario de trabajo puede ser diurno o nocturno",
+          "result": {
+            "duration": 0.0,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "Cuando",
+          "location": "features/marcar_hora_entrada.feature:8",
+          "match": {
+            "arguments": [
+              {
+                "name": "dia",
+                "value": "lunes"
+              },
+              {
+                "name": "hora",
+                "value": "7"
+              },
+              {
+                "name": "minu",
+                "value": "14"
+              },
+              {
+                "name": "seg",
+                "value": "59"
+              },
+              {
+                "name": "codigo",
+                "value": "20131"
+              }
+            ],
+            "location": "features/steps/jornadas_laborales.py:15"
+          },
+          "name": "llegue el dia 'lunes' e ingrese mi hora de entrada '7':'14':'59' e ingrese mi codigo de trabajador '20131'",
+          "result": {
+            "duration": 0.0,
+            "status": "passed"
+          },
+          "step_type": "when"
+        },
+        {
+          "keyword": "Entonces",
+          "location": "features/marcar_hora_entrada.feature:9",
+          "match": {
+            "arguments": [],
+            "location": "features/steps/jornadas_laborales.py:23"
+          },
+          "name": "se buscara mi nombre en la lista de trabajadores",
+          "result": {
+            "duration": 0.0,
+            "status": "passed"
+          },
+          "step_type": "then"
+        },
+        {
+          "keyword": "Y",
+          "location": "features/marcar_hora_entrada.feature:10",
+          "match": {
+            "arguments": [
+              {
+                "name": "mensaje",
+                "value": "Inicio de Jornada a tiempo, Bienvenido Luis Zuniga."
+              }
+            ],
+            "location": "features/steps/jornadas_laborales.py:29"
+          },
+          "name": "aparecera el siguiente mensaje: 'Inicio de Jornada a tiempo, Bienvenido Luis Zuniga.'",
+          "result": {
+            "duration": 0.0,
+            "status": "passed"
+          },
+          "step_type": "then"
+        },
+        {
+          "keyword": "Y",
+          "location": "features/marcar_hora_entrada.feature:11",
+          "match": {
+            "arguments": [
+              {
+                "name": "jornada",
+                "value": "Diurno A"
+              }
+            ],
+            "location": "features/steps/jornadas_laborales.py:35"
+          },
+          "name": "devolvera el tipo de jornada laboral: 'Diurno A'",
+          "result": {
+            "duration": 0.0,
+            "status": "passed"
+          },
+          "step_type": "then"
+        }
+      ],
+      "tags": [
+        "jornadasDeIngreso"
+      ],
+      "type": "scenario"
+    },
+    {
+      "keyword": "Escenario",
+      "location": "features/marcar_hora_entrada.feature:14",
+      "name": "",
+      "status": "passed",
+      "steps": [
+        {
+          "keyword": "Dado",
+          "location": "features/marcar_hora_entrada.feature:15",
+          "match": {
+            "arguments": [],
+            "location": "features/steps/jornadas_laborales.py:10"
+          },
+          "name": "que mi horario de trabajo puede ser diurno o nocturno",
+          "result": {
+            "duration": 0.009998083114624023,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "Cuando",
+          "location": "features/marcar_hora_entrada.feature:16",
+          "match": {
+            "arguments": [
+              {
+                "name": "dia",
+                "value": "martes"
+              },
+              {
+                "name": "hora",
+                "value": "7"
+              },
+              {
+                "name": "minu",
+                "value": "14"
+              },
+              {
+                "name": "seg",
+                "value": "59"
+              },
+              {
+                "name": "codigo",
+                "value": "20131"
+              }
+            ],
+            "location": "features/steps/jornadas_laborales.py:15"
+          },
+          "name": "llegue el dia 'martes' e ingrese mi hora de entrada '7':'14':'59' e ingrese mi codigo de trabajador '20131'",
+          "result": {
+            "duration": 0.0,
+            "status": "passed"
+          },
+          "step_type": "when"
+        },
+        {
+          "keyword": "Entonces",
+          "location": "features/marcar_hora_entrada.feature:17",
+          "match": {
+            "arguments": [],
+            "location": "features/steps/jornadas_laborales.py:23"
+          },
+          "name": "se buscara mi nombre en la lista de trabajadores",
+          "result": {
+            "duration": 0.0,
+            "status": "passed"
+          },
+          "step_type": "then"
+        },
+        {
+          "keyword": "Y",
+          "location": "features/marcar_hora_entrada.feature:18",
+          "match": {
+            "arguments": [
+              {
+                "name": "mensaje",
+                "value": "EL d\u00eda martes no tiene jornada laboral programada."
+              }
+            ],
+            "location": "features/steps/jornadas_laborales.py:29"
+          },
+          "name": "aparecera el siguiente mensaje: 'EL d\u00eda martes no tiene jornada laboral programada.'",
+          "result": {
+            "duration": 0.0,
+            "status": "passed"
+          },
+          "step_type": "then"
+        },
+        {
+          "keyword": "Y",
+          "location": "features/marcar_hora_entrada.feature:19",
+          "match": {
+            "arguments": [
+              {
+                "name": "jornada",
+                "value": "Diurno A"
+              }
+            ],
+            "location": "features/steps/jornadas_laborales.py:35"
+          },
+          "name": "devolvera el tipo de jornada laboral: 'Diurno A'",
+          "result": {
+            "duration": 0.0,
+            "status": "passed"
+          },
+          "step_type": "then"
+        }
+      ],
+      "tags": [
+        "jornadasDeIngreso"
+      ],
+      "type": "scenario"
+    },
+    {
+      "keyword": "Escenario",
+      "location": "features/marcar_hora_entrada.feature:22",
+      "name": "",
+      "status": "failed",
+      "steps": [
+        {
+          "keyword": "Dado",
+          "location": "features/marcar_hora_entrada.feature:23",
+          "match": {
+            "arguments": [],
+            "location": "features/steps/jornadas_laborales.py:10"
+          },
+          "name": "que mi horario de trabajo puede ser diurno o nocturno",
+          "result": {
+            "duration": 0.0,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "Cuando",
+          "location": "features/marcar_hora_entrada.feature:24",
+          "match": {
+            "arguments": [
+              {
+                "name": "dia",
+                "value": "lunes"
+              },
+              {
+                "name": "hora",
+                "value": "7"
+              },
+              {
+                "name": "minu",
+                "value": "30"
+              },
+              {
+                "name": "seg",
+                "value": "00"
+              },
+              {
+                "name": "codigo",
+                "value": "20131"
+              }
+            ],
+            "location": "features/steps/jornadas_laborales.py:15"
+          },
+          "name": "llegue el dia 'lunes' e ingrese mi hora de entrada '7':'30':'00' e ingrese mi codigo de trabajador '20131'",
+          "result": {
+            "duration": 0.0,
+            "status": "passed"
+          },
+          "step_type": "when"
+        },
+        {
+          "keyword": "Entonces",
+          "location": "features/marcar_hora_entrada.feature:25",
+          "match": {
+            "arguments": [],
+            "location": "features/steps/jornadas_laborales.py:23"
+          },
+          "name": "se buscara mi nombre en la lista de trabajadores",
+          "result": {
+            "duration": 0.009999275207519531,
+            "status": "passed"
+          },
+          "step_type": "then"
+        },
+        {
+          "keyword": "Y",
+          "location": "features/marcar_hora_entrada.feature:26",
+          "match": {
+            "arguments": [
+              {
+                "name": "mensaje",
+                "value": "Inicio de Jornada atrasada por 00:15:01."
+              }
+            ],
+            "location": "features/steps/jornadas_laborales.py:29"
+          },
+          "name": "aparecera el siguiente mensaje: 'Inicio de Jornada atrasada por 00:15:01.'",
+          "result": {
+            "duration": 0.0,
+            "error_message": [
+              "Traceback (most recent call last):",
+              "  File \"C:\\Python 3.7.2\\lib\\site-packages\\behave\\model.py\", line 1329, in run",
+              "    match.run(runner.context)",
+              "  File \"C:\\Python 3.7.2\\lib\\site-packages\\behave\\matchers.py\", line 98, in run",
+              "    self.func(context, *args, **kwargs)",
+              "  File \"features\\steps\\jornadas_laborales.py\", line 33, in step_impl",
+              "    assert context.mensaje == mensaje",
+              "AssertionError",
+              "",
+              "Captured stdout:",
+              "Inicio de Jornada atrasada por 0:15:01.",
+              "Inicio de Jornada atrasada por 00:15:01."
+            ],
+            "status": "failed"
+          },
+          "step_type": "then"
+        },
+        {
+          "keyword": "Y",
+          "location": "features/marcar_hora_entrada.feature:27",
+          "name": "devolvera el tipo de jornada laboral: 'Diurno A'",
+          "step_type": "then"
+        }
+      ],
+      "tags": [
+        "jornadasDeIngreso"
+      ],
+      "type": "scenario"
+    },
+    {
+      "keyword": "Escenario",
+      "location": "features/marcar_hora_entrada.feature:30",
+      "name": "",
+      "status": "failed",
+      "steps": [
+        {
+          "keyword": "Dado",
+          "location": "features/marcar_hora_entrada.feature:31",
+          "match": {
+            "arguments": [],
+            "location": "features/steps/jornadas_laborales.py:10"
+          },
+          "name": "que mi horario de trabajo puede ser diurno o nocturno",
+          "result": {
+            "duration": 0.0,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "Cuando",
+          "location": "features/marcar_hora_entrada.feature:32",
+          "match": {
+            "arguments": [
+              {
+                "name": "dia",
+                "value": "lunes"
+              },
+              {
+                "name": "hora",
+                "value": "6"
+              },
+              {
+                "name": "minu",
+                "value": "40"
+              },
+              {
+                "name": "seg",
+                "value": "00"
+              },
+              {
+                "name": "codigo",
+                "value": "20131"
+              }
+            ],
+            "location": "features/steps/jornadas_laborales.py:15"
+          },
+          "name": "llegue el dia 'lunes' e ingrese mi hora de entrada '6':'40':'00' e ingrese mi codigo de trabajador '20131'",
+          "result": {
+            "duration": 0.0,
+            "status": "passed"
+          },
+          "step_type": "when"
+        },
+        {
+          "keyword": "Entonces",
+          "location": "features/marcar_hora_entrada.feature:33",
+          "match": {
+            "arguments": [],
+            "location": "features/steps/jornadas_laborales.py:23"
+          },
+          "name": "se buscara mi nombre en la lista de trabajadores",
+          "result": {
+            "duration": 0.0,
+            "status": "passed"
+          },
+          "step_type": "then"
+        },
+        {
+          "keyword": "Y",
+          "location": "features/marcar_hora_entrada.feature:34",
+          "match": {
+            "arguments": [
+              {
+                "name": "mensaje",
+                "value": "Su turno empieza en 00:00:01."
+              }
+            ],
+            "location": "features/steps/jornadas_laborales.py:29"
+          },
+          "name": "aparecera el siguiente mensaje: 'Su turno empieza en 00:00:01.'",
+          "result": {
+            "duration": 0.0,
+            "error_message": [
+              "Traceback (most recent call last):",
+              "  File \"C:\\Python 3.7.2\\lib\\site-packages\\behave\\model.py\", line 1329, in run",
+              "    match.run(runner.context)",
+              "  File \"C:\\Python 3.7.2\\lib\\site-packages\\behave\\matchers.py\", line 98, in run",
+              "    self.func(context, *args, **kwargs)",
+              "  File \"features\\steps\\jornadas_laborales.py\", line 33, in step_impl",
+              "    assert context.mensaje == mensaje",
+              "AssertionError",
+              "",
+              "Captured stdout:",
+              "Su turno empieza en 0:00:01.",
+              "Su turno empieza en 00:00:01."
+            ],
+            "status": "failed"
+          },
+          "step_type": "then"
+        },
+        {
+          "keyword": "Y",
+          "location": "features/marcar_hora_entrada.feature:35",
+          "name": "devolvera el tipo de jornada laboral: 'Diurno A'",
+          "step_type": "then"
+        }
+      ],
+      "tags": [
+        "jornadasDeIngreso"
+      ],
+      "type": "scenario"
+    }
+  ],
+  "keyword": "Caracter\u00edstica",
+  "location": "features/marcar_hora_entrada.feature:3",
+  "name": "Registrar hora de entrada",
+  "status": "failed",
+  "tags": []
+}
+]

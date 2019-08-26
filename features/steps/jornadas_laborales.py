@@ -7,19 +7,31 @@ def before_scenario(context, scenario):
 	context = {}
 
 
-@given("que se cumplen los requisitos")
+@given("que mi horario de trabajo puede ser diurno o nocturno")
 def step_impl(context):
-	pass
+	context.empleados = empleados
+	context.horarios = horarios
 
-@when("se ejecute una accion")
+@when("llegue el dia '{dia}' e ingrese mi hora de entrada '{hora}':'{minu}':'{seg}' e ingrese mi codigo de trabajador '{codigo}'")
+def step_impl(context, dia, hora, minu, seg, codigo):
+	context.dia = dia
+	context.hora = int(hora)
+	context.minutos = int(minu)
+	context.segundos = int(seg)
+	context.codigo = codigo
+
+@then("se buscara mi nombre en la lista de trabajadores")
 def step_impl(context):
-	pass
+	mensaje, jornada = marcar_hora_entrada(context.codigo, context.dia, context.hora, context.minutos, context.segundos)
+	context.mensaje = mensaje
+	context.jornada = jornada
 
-@then("genera el siguiete resultado '{variable}'")
-def step_impl(context, variable):
-	print(variable)
-	pass
+@then("aparecera el siguiente mensaje: '{mensaje}'")
+def step_impl(context, mensaje):
+	print(context.mensaje)
+	print(mensaje)
+	assert context.mensaje == mensaje
 
-@then("tambien ocurre lo siguiente (si es necesario)")
-def step_impl(context):
-	pass
+@then("devolvera el tipo de jornada laboral: '{jornada}'")
+def step_impl(context, jornada):
+	assert context.jornada == jornada

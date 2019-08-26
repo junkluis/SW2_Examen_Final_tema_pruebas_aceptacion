@@ -1,0 +1,84 @@
+[
+    {
+        "elements": [
+            {
+                "keyword": "Escenario",
+                "name": "",
+                "steps": [
+                    {
+                        "keyword": "Dado",
+                        "match": {
+                            "arguments": [],
+                            "location": "features/steps/jornadas_laborales.py:10"
+                        },
+                        "name": "que mi horario de trabajo puede ser diurno o nocturno",
+                        "result": {
+                            "duration": 0.0,
+                            "status": "passed"
+                        },
+                        "line": 7
+                    },
+                    {
+                        "keyword": "Cuando",
+                        "match": {
+                            "arguments": [
+                                {
+                                    "name": "minutos",
+                                    "value": "14"
+                                },
+                                {
+                                    "name": "segundos",
+                                    "value": "59"
+                                }
+                            ],
+                            "location": "features/steps/jornadas_laborales.py:14"
+                        },
+                        "name": "ingrese mi hora de entrada hasta con un retraso de '14' minutos con '59' segundos a mi hora de marcado e ingrese mi codigo de trabajador",
+                        "result": {
+                            "duration": 0.0,
+                            "status": "failed",
+                            "error_message": "['Traceback (most recent call last):', '  File C:\\\\Python 3.7.2\\\\lib\\\\site-packages\\\\behave\\\\model.py, line 1329, in run', '    match.run(runner.context)', '  File C:\\\\Python 3.7.2\\\\lib\\\\site-packages\\\\behave\\\\matchers.py, line 98, in run', '    self.func(context, *args, **kwargs)', TypeError: step_impl() got an unexpected keyword argument 'minutos']"
+                        },
+                        "line": 8
+                    },
+                    {
+                        "keyword": "Entonces",
+                        "name": "genera el siguiete resultado 'resultado_variable'",
+                        "line": 9,
+                        "result": {
+                            "status": "skipped",
+                            "duration": 0
+                        }
+                    },
+                    {
+                        "keyword": "Y",
+                        "name": "tambien ocurre lo siguiente (si es necesario)",
+                        "line": 10,
+                        "result": {
+                            "status": "skipped",
+                            "duration": 0
+                        }
+                    }
+                ],
+                "tags": [
+                    {
+                        "name": "@jornadasDeIngreso",
+                        "line": 5
+                    }
+                ],
+                "type": "scenario",
+                "line": 6,
+                "uri": "features/marcar_hora_entrada.feature",
+                "description": "",
+                "id": 1
+            }
+        ],
+        "keyword": "Caracter\u00edstica",
+        "name": "Registrar hora de entrada",
+        "tags": [],
+        "line": 3,
+        "uri": "features/marcar_hora_entrada.feature",
+        "description": "",
+        "id": 0
+    }
+]
