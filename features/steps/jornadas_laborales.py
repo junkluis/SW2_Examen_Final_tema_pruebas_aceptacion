@@ -7,19 +7,19 @@ def before_scenario(context, scenario):
 	context = {}
 
 
-@given("que se cumplen los requisitos")
-def step_impl(context):
-	pass
+@given("que mi horario de trabajo es '{horario}'")
+def step_impl(context, horario):
+	assert horario in ["diurno", "nocturno"]
 
-@when("se ejecute una accion")
-def step_impl(context):
-	pass
+@when("ingrese mi hora de entrada siendo las '{hora_entrada}' el dia '{dia}' con codigo '{codigo}'")
+def step_impl(context, hora_entrada, dia, codigo):
+	mensaje, jornada = marcar_hora_entrada(codigo, dia, int(hora_entrada.split(":")[0]), int(hora_entrada.split(":")[1]), int(hora_entrada.split(":")[2]))
+	context.mensaje = mensaje
+	context.jornada = jornada
 
-@then("genera el siguiete resultado '{variable}'")
-def step_impl(context, variable):
-	print(variable)
-	pass
-
-@then("tambien ocurre lo siguiente (si es necesario)")
-def step_impl(context):
-	pass
+@then("aparecera el mensaje '{mensaje}' con mi jornada '{jornada}'")
+def step_impl(context, mensaje, jornada):
+	print(context.mensaje)
+	print(context.jornada)
+	assert context.mensaje.split(".")[0] == mensaje
+	assert context.jornada == jornada
