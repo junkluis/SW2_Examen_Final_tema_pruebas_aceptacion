@@ -46,6 +46,8 @@ def step_impl(context):
 
 @then("aparecerá el mensaje '{mensaje}'")
 def step_impl(context, mensaje):
+	print(context.mensaje)
+	print(mensaje)
 	assert context.mensaje == mensaje
 
 @then("devolverá el tipo de jornada '{jornada}'")
