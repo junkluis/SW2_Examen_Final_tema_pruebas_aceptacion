@@ -8,3 +8,4 @@ Característica: Registrar hora de entrada
       Cuando se ejecute una accion
       Entonces genera el siguiete resultado 'resultado_variable'
       Y tambien ocurre lo siguiente (si es necesario)
+      
