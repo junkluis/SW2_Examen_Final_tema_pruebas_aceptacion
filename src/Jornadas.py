@@ -1,4 +1,4 @@
-"""Funciones necesarias para busqueda de peliculas."""
+"""Funciones necesarias para busqueda de usuarios."""
 from datetime import time, timedelta, datetime
 
 empleados = {"20131": ("Luis Zuniga", 		"Diurno A"),

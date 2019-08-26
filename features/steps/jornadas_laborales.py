@@ -7,19 +7,27 @@ def before_scenario(context, scenario):
 	context = {}
 
 
-@given("que se cumplen los requisitos")
-def step_impl(context):
-	pass
+@given("mi codigo {codigo}")
+def step_impl(context, codigo):
+	context.codigo = codigo
+	print(context.codigo)
 
-@when("se ejecute una accion")
-def step_impl(context):
-	pass
+@when("ingreso el dia {dia} con la hora {hora}, minutos {minutos} y segundos {segundos}")
+def step_impl(context, dia, hora, minutos, segundos):
+	context.hora = int(hora)
+	context.dia = dia
+	context.minutos = int(minutos)
+	context.segundos = int(segundos)
+	context.retorno = marcar_hora_entrada(context.codigo, context.dia, context.hora, context.minutos, context.segundos)
 
-@then("genera el siguiete resultado '{variable}'")
-def step_impl(context, variable):
-	print(variable)
-	pass
+@then("genera el siguiete resultado '{mensaje}'")
+def step_impl(context, mensaje):
+	assert(context.retorno[0],'Inicio de Jornada a tiempo, Bienvenido Luis Zuniga')
 
-@then("tambien ocurre lo siguiente (si es necesario)")
-def step_impl(context):
-	pass
+@then("mi tipo de jornada laboral es {jornada}")
+def step_impl(context, jornada):
+	assert("mi tipo de jornada laboral es " + "'" + context.retorno[1] + "'","mi tipo de jornada laboral es 'Diurno A'")
+
+@then("no puedo ingresar porque {mensaje}")
+def step_impl(context, mensaje):
+	assert(context.retorno[0], 'EL día martes no tiene jornada laboral programada.')
