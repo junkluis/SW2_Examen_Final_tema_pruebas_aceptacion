@@ -24,6 +24,7 @@ Característica: Registrar hora de entrada
       Y ingrese mi codigo de trabajador '20131'
       Entonces se buscara mi nombre en la lista de trabajadores y aparecerá el siguiente mensaje 'EL DIA LUNES NO TIENE JORNADA LABORAL PROGRAMADA.'
       Y cuya jornada laboral es 'Diurno B'
+      
 
    @jornadasDeIngresoC3
   Escenario: llega atrasado
