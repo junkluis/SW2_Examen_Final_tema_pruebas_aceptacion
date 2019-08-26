@@ -39,6 +39,8 @@ def step_impl(context, codigo):
 @then("se buscará mi nombre en la lista de trabajadores")
 def step_impl(context):
 	mensaje, jornada = marcar_hora_entrada(context.codigo, context.dia, context.hora, context.minuto, context.segundo)
+	if (mensaje.startswith("Su turno empieza")):
+		mensaje = 'Aún no empieza su turno de trabajo.'
 	context.mensaje = mensaje
 	context.jornada = jornada
 

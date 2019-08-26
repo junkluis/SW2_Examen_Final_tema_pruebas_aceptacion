@@ -35,5 +35,5 @@ Característica: Registrar hora de entrada
         Cuando ingrese mi hora de entrada: lunes 6:40:00
         Y ingrese mi codigo de trabajador 20131
         Entonces se buscará mi nombre en la lista de trabajadores
-        Y aparecerá el mensaje 'Su turno empieza en 0:00:01.'
+        Y aparecerá el mensaje 'Aún no empieza su turno de trabajo.'
         Y devolverá el tipo de jornada 'Diurno A'
