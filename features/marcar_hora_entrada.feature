@@ -13,7 +13,7 @@ Característica: Registrar hora de entrada
     @jornadasDeIngreso
     Escenario: El trabajador incia su jornada normalmente
         Dado que mi horario de trabajo puede ser diurno o nocturno
-        Cuando ingrese mi hora de entrada 'Lunes 7:00:00'
+        Cuando ingrese mi hora de entrada 'lunes 7:00:00'
         Y ingrese mi codigo de trabajador '20131'
         Entonces se buscara mi nombre en la lista de los trabajadores
         Y aparecera el siguiente mensaje 'Inicio de jornada a tiempo, Bienvenido Luis Zuniga.'
@@ -23,7 +23,7 @@ Característica: Registrar hora de entrada
     @jornadasDeIngreso
     Escenario: El trabajador incia su jornada tarde
         Dado que mi horario de trabajo puede ser diurno o nocturno
-        Cuando ingrese mi hora de entrada 'Lunes 7:20:00'
+        Cuando ingrese mi hora de entrada 'lunes 7:20:00'
         Y ingrese mi codigo de trabajador '20131'
         Entonces se buscara mi nombre en la lista de los trabajadores
         Y aparecera el siguiente mensaje 'Inicio de Jornada atrasada por 00:20:00.'
@@ -33,7 +33,7 @@ Característica: Registrar hora de entrada
     @jornadasDeIngreso
     Escenario: El trabajador intenta iniciar su jornada muy temprano
         Dado que mi horario de trabajo puede ser diurno o nocturno
-        Cuando ingrese mi hora de entrada 'Lunes 6:30:00'
+        Cuando ingrese mi hora de entrada 'lunes 6:30:00'
         Y ingrese mi codigo de trabajador '20131'
         Entonces se buscara mi nombre en la lista de los trabajadores
         Y aparecera el siguiente mensaje 'Aun no empieza su turno de trabajo'

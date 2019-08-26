@@ -38,6 +38,9 @@ def step_impl(context, hora_entrada):
     hora_entrada = hora_entrada.split(" ")
     dia = hora_entrada[0]
     tiempo = hora_entrada[1].split(":")
+    print(hora_entrada)
+    print(dia)
+    print(tiempo)
     context['dia'] = dia
     context['hora'] = int(tiempo[0])
     context['minutos'] = int(tiempo[1])
@@ -58,10 +61,12 @@ def step_impl(context, variable):
     context['mensaje'] = mensaje
     context['empleado'] = empleado
 
+
 @then("aparecera el siguiente mensaje '{msg}'")
 def step_impl(context, msg):
-	assert context['mensaje'] == msg
+    assert context['mensaje'] == msg
+
 
 @then("devolvera el tipo de jornada '{jornada}'")
 def step_impl(context, jornada):
-	assert context['empleado'](1) == jornada
+    assert context['empleado'](1) == jornada
