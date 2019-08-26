@@ -24,4 +24,4 @@ Característica: Registrar hora de entrada
   Escenario:
       Dado que mi horario de trabajo es 'diurno'
       Cuando ingrese mi hora de entrada siendo las '13:05:00' el dia 'martes' con codigo '20153'
-      Entonces aparecera el mensaje 'Su turno empieza en 0:05.01' con mi jornada 'Diurno B'
+      Entonces aparecera el mensaje 'Su turno empieza en 0:05:01' con mi jornada 'Diurno B'
