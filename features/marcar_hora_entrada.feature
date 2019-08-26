@@ -27,11 +27,11 @@ Característica: Registrar hora de entrada
 
  @jornadasDeIngreso3
   Escenario: llego atrasado
-      Dado que mi horario de trabajo es 'Nocturno B' y es 'jueves'
-      Cuando ingrese mi hora de entrada como '17:16:00'
+      Dado que mi horario de trabajo es 'Diurno A' y es 'viernes'
+      Cuando ingrese mi hora de entrada como '7:15:00'
       Y ingrese mi codigo de trabajador '20191'
-      Entonces aparecerá el siguiente mensaje 'Inicio de Jornada atrasada por 0:03:00.'
-      Y cuya jornada laboral es 'Nocturno B'
+      Entonces aparecerá el siguiente mensaje 'Inicio de Jornada atrasada por 00:00:01.'
+      Y cuya jornada laboral es 'Diurno A'
 
  @jornadasDeIngreso4
   Escenario: llega antes
